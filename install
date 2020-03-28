@@ -1,0 +1,17 @@
+#!/bin/bash
+
+platform=`uname -s`
+
+if [ $platform == 'Darwin' ]; then
+    cp ./ml ./ml.macosx
+    sudo rm -f /usr/local/bin/ml
+    sudo ln -s `pwd`/ml.macosx /usr/local/bin/ml
+else
+    cp ./ml ./ml.linux.64
+    sudo rm -f /usr/bin/ml
+    sudo ln -s `pwd`/ml.linux.64 /usr/bin/ml
+fi
+
+sudo rm -f /usr/local/bin/mll
+sudo ln -s `pwd`/mll /usr/local/bin/mll
+

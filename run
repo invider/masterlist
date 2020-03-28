@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export GOPATH=`pwd`
+export MLPATH=$HOME'/Dropbox'
+
+#go run src/ml.go -v "$@"
+./build
+./ml -v "$@"
+

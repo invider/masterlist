@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export GOPATH=`pwd`
+go build src/ml.go
+
