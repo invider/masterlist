@@ -1,4 +1,5 @@
 #!/bin/sh
 
+rm -f ./src/main
 rm -f ml
 rm -f *.bak
